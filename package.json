@@ -1,0 +1,23 @@
+{
+  "name": "gimmevents",
+  "version": "0.0.1",
+  "author": "Michał Budzyński <michal@virtualdesign.pl>",
+  "repository": "git@github.com:michalbe/gimmevents.git",
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "eslint": "^4.17.0",
+    "eslint-config-defaults": "^9.0.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^8.3.0",
+    "rollup-plugin-livereload": "^0.6.0",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-serve": "^0.4.2",
+    "rollup-watch": "^4.3.1"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w"
+  }
+}
