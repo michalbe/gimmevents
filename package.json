@@ -19,5 +19,8 @@
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.0"
   }
 }
