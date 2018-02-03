@@ -3,4 +3,31 @@ gimmevents
 by @michalbe
 
 
-## HELLO
+## API SCHEMA
+
+### SENDER
+```
+const gimmevents = new Gimmevents('key');
+
+gimmevents.register('event');
+```
+
+### RECEIVER
+```
+const gimmevents = new Gimmevents('key');
+
+gimmevents.on('event', (e) => {
+ // Handler
+});
+```
+
+## EVENTS
+
+  - keyup
+	- keydown
+	- keypress
+	- mousemove
+	- mouseup
+	- mousedown
+
+	
