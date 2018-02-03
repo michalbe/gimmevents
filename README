@@ -7,14 +7,20 @@ by @michalbe
 
 ### SENDER
 ```
-const gimmevents = new Gimmevents('key');
+const gimmevents = new Gimmevents({
+	key: key,
+	host: host
+});
 
 gimmevents.register('event');
 ```
 
 ### RECEIVER
 ```
-const gimmevents = new Gimmevents('key');
+const gimmevents = new Gimmevents({
+	key: key,
+	host: host
+});
 
 gimmevents.on('event', (e) => {
  // Handler
@@ -29,5 +35,3 @@ gimmevents.on('event', (e) => {
 	- mousemove
 	- mouseup
 	- mousedown
-
-	
