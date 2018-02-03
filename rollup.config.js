@@ -5,9 +5,12 @@ import serve from 'rollup-plugin-serve'
 import livereload from 'rollup-plugin-livereload'
 
 export default {
-  entry: 'src/main.js',
-  format: 'umd',
-  moduleName: 'gimmevents',
+  input: 'src/main.js',
+	output: {
+		name: 'gimmevents',
+		format: 'umd',
+		file: 'dist/gimmevents.js'
+	},
   plugins: [
     commonjs({
       include: 'node_modules/**',
@@ -26,6 +29,5 @@ export default {
     livereload({
       watch: ['dist']
     })
-  ],
-  dest: 'dist/gimmevents.js'
+  ]
 }
