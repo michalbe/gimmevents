@@ -19,7 +19,10 @@ nodemon.on('start', () => {
 
 
 const cmd_process = spawn(
-	'rollup', [ '-c', '-w' ]
+	'node', [
+		'node_modules/rollup/bin/rollup', 
+		'-c', '-w'
+	]
 );
 
 cmd_process.stdout.on('data', data => {
