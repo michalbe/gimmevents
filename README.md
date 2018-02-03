@@ -30,8 +30,8 @@ gimmevents.on('event', (e) => {
 ## EVENTS
 
   - keyup
-	- keydown
-	- keypress
-	- mousemove
-	- mouseup
-	- mousedown
+  - keydown
+  - keypress
+  - mousemove
+  - mouseup
+  - mousedown
