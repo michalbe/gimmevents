@@ -11,6 +11,7 @@
     "eslint": "^4.17.0",
     "eslint-config-defaults": "^9.0.0",
     "nodemon": "^1.14.12",
+    "rollup": "^0.55.5",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-commonjs": "^8.3.0",
     "rollup-plugin-livereload": "^0.6.0",
