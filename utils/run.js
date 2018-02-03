@@ -5,11 +5,11 @@ nodemon({
   ext: 'js json'
 });
 
-nodemon.on('start', function () {
+nodemon.on('start', () => {
   console.log('Server has started');
-}).on('quit', function () {
+}).on('quit', () => {
   console.log('Server has quit');
   process.exit();
-}).on('restart', function (files) {
+}).on('restart', (files) => {
   console.log('Server restarted due to: ', files);
 });
