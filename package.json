@@ -20,6 +20,6 @@
   },
   "scripts": {
     "build": "rollup -c",
-    "dev": "rollup -c -w"
+    "dev": "node utils/run.js"
   }
 }
