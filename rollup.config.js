@@ -7,7 +7,7 @@ import livereload from 'rollup-plugin-livereload'
 export default {
   input: 'src/main.js',
 	output: {
-		name: 'gimmevents',
+		name: 'Gimmevents',
 		format: 'umd',
 		file: 'dist/gimmevents.js'
 	},
