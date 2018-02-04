@@ -5,7 +5,7 @@ const server = new WSServer({ port });
 
 server.on('connection', (ws) => {
 	ws.on('message', (message) => {
-		console.log(`Received: ${ message.toString() }`);
+		console.log(`Received: ${ message }`);
 	});
 
 	setInterval(() => {
