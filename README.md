@@ -7,7 +7,7 @@ by @michalbe
 
 ### SENDER
 ```
-const gimmevents = new Gimmevents({
+const gimmevents = new Gimmevents.Sender({
 	key: key,
 	host: host
 });
@@ -17,7 +17,7 @@ gimmevents.register('event');
 
 ### RECEIVER
 ```
-const gimmevents = new Gimmevents({
+const gimmevents = new Gimmevents.Receiver({
 	key: key,
 	host: host
 });
