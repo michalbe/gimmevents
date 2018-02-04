@@ -7,8 +7,4 @@ server.on('connection', (ws) => {
 	ws.on('message', (message) => {
 		console.log(`Received: ${ message }`);
 	});
-
-	setInterval(() => {
-		ws.send(`${ new Date() }`)
-	}, 1000)
 });
