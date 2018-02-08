@@ -1,5 +1,5 @@
-import { Sender } from './sender';
+import { Emitter } from './emitter';
 
 export default {
-	Sender
+	Emitter
 };

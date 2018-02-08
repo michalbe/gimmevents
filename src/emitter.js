@@ -7,7 +7,7 @@ const priv = private_methods.reduce((memo, item) => {
 	return memo;
 }, {});
 
-export class Sender {
+export class Emitter {
 	constructor(options = {}) {
 		this.key = options.key;
 		this.host = options.host;
