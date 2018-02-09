@@ -5,9 +5,9 @@ by @michalbe
 
 ## API SCHEMA
 
-### SENDER
+### Emitter
 ```
-const gimmevents = new Gimmevents.Sender({
+const gimmevents = new Gimmevents.Emitter({
 	key: key,
 	host: host
 });
