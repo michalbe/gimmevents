@@ -5,6 +5,7 @@ const server = new WSServer({ port });
 
 server.on('connection', (ws) => {
 	ws.on('message', (message) => {
-		console.log(`Received: ${ message }`);
+		message = JSON.parse(message);
+		console.log(`Received: ${ message.role }`);
 	});
 });
