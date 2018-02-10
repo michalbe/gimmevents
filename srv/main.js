@@ -22,15 +22,19 @@ server.on('connection', (ws) => {
 		}
 
 		const pair = pairs.get(message.key);
-		if (pair.getClientByRole(message.role)) {
-			ws.send(JSON.stringify({
-				message: `This pair already have a ${message.role}`
-			}));
-			ws.terminate();
-		} else {
-			const client = new Clients[message.role]({
-				connection: ws
-			});
+		if (message.action === 'create') {
+			if (pair.get_client_by_role(message.role)) {
+				ws.send(JSON.stringify({
+					message: `This pair already have a ${message.role}`
+				}));
+				ws.terminate();
+			} else {
+				const client = new Clients[message.role]({
+					connection: ws
+				});
+
+				pair.assign_client(client);
+			}
 		}
 	});
 });

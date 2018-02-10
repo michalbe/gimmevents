@@ -5,18 +5,24 @@ class Pair {
 		this.key = key;
 	}
 
-	assignClient(client) {
-		if (!CLIENT_ROLES.has(client.role)) {
+	assign_client(client) {
+		if (!CLIENT_ROLES.includes(client.role)) {
 			throw new Error(`${client.role} is not a proper role.`);
 			return;
 		}
 
 		this[client.role] = client;
+
+		client.connection.on('message', (msg) => {
+			console.log(msg);
+		})
+
 	}
 
-	getClientByRole(role) {
+	get_client_by_role(role) {
 		return this[role];
 	}
+
 };
 
 module.exports = Pair;
