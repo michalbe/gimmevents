@@ -19,11 +19,13 @@ export class Base {
 		this[priv.send]({ action: 'create' });
 	}
 
-	[priv.send] ({ action }) {
+	[priv.send] ({ action, event_name = '', event_data = {} }) {
 		this.socket_handle.send(JSON.stringify({
 			key: this.key,
 			role: this.role,
-			action
+			action,
+			event_name,
+			event_data
 		}));
 	}
 }
