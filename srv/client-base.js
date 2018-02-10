@@ -1,8 +1,8 @@
-class Client {
+class ClientBase {
 	constructor({ connection, role }) {
 		this.connection = connection;
 		this.role = role;
 	}
 }
 
-module.exports = Client;
+module.exports = ClientBase;

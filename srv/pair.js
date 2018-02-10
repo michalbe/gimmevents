@@ -1,8 +1,21 @@
+const CLIENT_ROLES = ['emitter', 'receiver'];
+
 class Pair {
-	constructor({ key, emitter, receiver }) {
+	constructor({ key }) {
 		this.key = key;
-		this.emitter = emitter;
-		this.receiver = receiver;
+	}
+
+	assignClient(client) {
+		if (!CLIENT_ROLES.has(client.role)) {
+			throw new Error(`${client.role} is not a proper role.`);
+			return;
+		}
+
+		this[client.role] = client;
+	}
+
+	getClientByRole(role) {
+		return this[role];
 	}
 };
 
