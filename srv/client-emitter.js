@@ -4,6 +4,10 @@ class ClientEmitter extends ClientBase {
 	constructor(options) {
 		options.role = 'emitter';
 		super(options);
+
+		this.connection.on('message', (msg) => {
+			console.log(msg);
+		});
 	}
 }
 

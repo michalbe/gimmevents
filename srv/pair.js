@@ -12,11 +12,6 @@ class Pair {
 		}
 
 		this[client.role] = client;
-
-		client.connection.on('message', (msg) => {
-			console.log(msg);
-		})
-
 	}
 
 	get_client_by_role(role) {
