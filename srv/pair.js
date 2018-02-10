@@ -1,8 +1,8 @@
 class Pair {
-	constructor(options = {}) {
-		this.key = options.key;
-		this.emitter = options.emitter;
-		this.receiver = options.receiver;
+	constructor({ key, emitter, receiver }) {
+		this.key = key;
+		this.emitter = emitter;
+		this.receiver = receiver;
 	}
 };
 

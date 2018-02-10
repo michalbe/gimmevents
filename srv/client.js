@@ -1,7 +1,7 @@
 class Client {
-	constructor(options = {}) {
-		this.connection = options.connection;
-		this.role = options.role;
+	constructor({ connection, role }) {
+		this.connection = connection;
+		this.role = role;
 	}
 }
 

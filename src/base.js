@@ -1,10 +1,10 @@
 import { priv } from './_priv';
 
 export class Base {
-	constructor(options = {}) {
-		this.key = options.key;
-		this.host = options.host;
-		this.role = options.role;
+	constructor({ key, host, role }) {
+		this.key = key;
+		this.host = host;
+		this.role = role;
 		this[priv.connect]();
 	}
 
