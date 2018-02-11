@@ -1,8 +1,8 @@
-const private_methods = [
+const privates = [
 	'connect', 'on_connect', 'send'
 ];
 
-export const priv = private_methods.reduce((memo, item) => {
+export const priv = privates.reduce((memo, item) => {
 	memo[item] = Symbol(item);
 	return memo;
 }, {});
