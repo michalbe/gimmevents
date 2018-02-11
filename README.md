@@ -14,6 +14,9 @@ I don't have any VR controller what makes my [a-frame](https://github.com/aframe
 ### Keyboard events
 ![gimmevents-keyboard.gif](gimmevents-keyboard.gif)
 
+### Mouse events
+![gimmevents-mouse.gif](gimmevents-mouse.gif)
+
 ## API
 ### Emitter
 ```javascript
