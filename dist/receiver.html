@@ -3,6 +3,7 @@
   <title>Gimmevents</title>
 </head>
 <body>
+	<span>Other client pressed: <span id="output">nothing yet</span>.</span>
   <script src="gimmevents.js"></script>
 	<script>
 		const host = 'localhost:40510';
@@ -12,5 +13,8 @@
 			host
 		});
 
+		gimmevents.on('keydown', (e) => {
+			document.querySelector('#output').innerHTML = e.key;
+		});
 	</script>
 </body>
