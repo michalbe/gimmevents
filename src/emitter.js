@@ -1,5 +1,5 @@
-import { Base } from './base';
 import { priv } from './_priv';
+import { Base } from './base';
 
 export class Emitter extends Base {
 	constructor(options = {}) {
