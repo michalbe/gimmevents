@@ -9,7 +9,10 @@ by [@michalbe](http://github.com/michalbe)
 I don't have any VR controller what makes my [a-frame](https://github.com/aframevr/aframe) based games boring and non-interactive. With [Gimmevents](https://github.com/michalbe/gimmevents) I can render game on my VR set (for now it's just my phone) and still control it with my computer's keyboard or mouse.
 
 ## HOW?
-[Gimmevents](https://github.com/michalbe/gimmevents) uses [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) and a build in pairing system to send events from one browser to another.
+[Gimmevents](https://github.com/michalbe/gimmevents) uses [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) and custom pairing system to send events from one browser to another.
+
+### Keyboard events
+![gimmevents-keyboard.gif](gimmevents-keyboard.gif)
 
 ## API
 ### Emitter
