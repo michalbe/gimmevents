@@ -17,6 +17,7 @@ export class Base {
 		console.log('Connected ...');
 		this.is_connected = true;
 		this[priv.send]({ action: 'create' });
+		this[priv.setup_listeners]();
 	}
 
 	[priv.send] ({ action, event_name = '', event_data = {} }) {
@@ -34,8 +35,12 @@ export class Base {
 			return;
 		}
 
-		this.socket_handle.on('message', (msg) => {
-			handler(JSON.parse(msg));
-		});
+		this.socket_handle.onmessage = (msg) => {
+			const data = JSON.parse(msg.data);
+			handler(data);
+		};
+	}
+
+	[priv.setup_listeners] () {
 	}
 }

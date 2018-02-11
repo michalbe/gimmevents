@@ -7,8 +7,6 @@ export class Receiver extends Base {
 		super(options);
 
 		this[priv.listeners] = [];
-
-		this[priv.on_message](this[priv.handle_message]);
 	}
 
 	on(event, handler) {
@@ -24,5 +22,9 @@ export class Receiver extends Base {
 				listener.handler(message);
 			}
 		})
+	}
+
+	[priv.setup_listeners] () {
+		this[priv.on_message](this[priv.handle_message].bind(this));
 	}
 }
