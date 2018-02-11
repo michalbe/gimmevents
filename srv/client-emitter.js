@@ -8,8 +8,8 @@ class ClientEmitter extends ClientBase {
 		this.connection.on('message', (msg) => {
 			msg = JSON.parse(msg);
 			if (msg.action === 'update') {
-				this.part.get_client_by_role('receiver')
-					.send(JSON.stringify(msg));
+				this.pair.get_client_by_role('receiver')
+					.connection.send(JSON.stringify(msg));
 			}
 		});
 	}

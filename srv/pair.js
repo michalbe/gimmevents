@@ -12,6 +12,7 @@ class Pair {
 		}
 
 		this[client.role] = client;
+		client.pair = this;
 	}
 
 	get_client_by_role(role) {
