@@ -9,7 +9,7 @@ class ClientEmitter extends ClientBase {
 			msg = JSON.parse(msg);
 			if (msg.action === 'update') {
 				this.part.get_client_by_role('receiver')
-					.send(JSON.stringify(msg))
+					.send(JSON.stringify(msg));
 			}
 		});
 	}
