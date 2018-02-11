@@ -43,4 +43,5 @@ cd gimmevents
 npm i
 npm run dev
 ```
-then open [http://localhost:7100/emitter.html](localhost:7100/emitter.html) in one browser and [http://localhost:7100/receiver.html](localhost:7100/receiver.html) in another. Demo listened to all the keys pressed in one window and sends them to another.
+
+then open [localhost:7100/emitter.html](http://localhost:7100/emitter.html) in one browser and [localhost:7100/receiver.html](http://localhost:7100/receiver.html) in another. Demo listened to all the keys pressed in one window and sends them to another.
