@@ -19,7 +19,7 @@ export class Receiver extends Base {
 	[priv.handle_message] (message) {
 		this[priv.listeners].forEach((listener) => {
 			if (listener.event_name === message.event_name) {
-				listener.handler(message);
+				listener.handler(message.event_data);
 			}
 		})
 	}
