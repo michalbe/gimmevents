@@ -28,4 +28,14 @@ export class Base {
 			event_data
 		}));
 	}
+
+	[priv.on_message] (handler) {
+		if (typeof handler !== 'function') {
+			return;
+		}
+
+		this.socket_handle.on('message', (msg) => {
+			handler(JSON.parse(msg));
+		});
+	}
 }
