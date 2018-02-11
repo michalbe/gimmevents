@@ -1,5 +1,5 @@
 const privates = [
-	'connect', 'on_connect', 'send'
+	'connect', 'on_connect', 'send', 'listeners'
 ];
 
 export const priv = privates.reduce((memo, item) => {

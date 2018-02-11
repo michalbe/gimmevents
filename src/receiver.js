@@ -1,3 +1,4 @@
+import { priv } from './_priv';
 import { Base } from './base';
 
 export class Receiver extends Base {
@@ -5,4 +6,6 @@ export class Receiver extends Base {
 		options.role = 'receiver';
 		super(options);
 	}
+
+
 }
