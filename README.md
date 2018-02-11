@@ -1,10 +1,9 @@
 gimmevents
 ---
-by @michalbe
+by [@michalbe](http://github.com/michalbe)
 
 
-## API SCHEMA
-
+## API
 ### Emitter
 ```
 const gimmevents = new Gimmevents.Emitter({
@@ -12,7 +11,7 @@ const gimmevents = new Gimmevents.Emitter({
 	host: host
 });
 
-gimmevents.register('event');
+gimmevents.register(event);
 ```
 
 ### RECEIVER
@@ -22,7 +21,7 @@ const gimmevents = new Gimmevents.Receiver({
 	host: host
 });
 
-gimmevents.on('event', (e) => {
+gimmevents.on(event, (e) => {
  // Handler
 });
 ```
@@ -35,3 +34,13 @@ gimmevents.on('event', (e) => {
   - mousemove
   - mouseup
   - mousedown
+
+## Development
+
+```
+git clone git@github.com:michalbe/gimmevents.git
+cd gimmevents
+npm i
+npm run dev
+```
+then open [http://localhost:7100/emitter.html](localhost:7100/emitter.html) in one browser and [http://localhost:7100/receiver.html](localhost:7100/receiver.html) in another. Demo listened to all the keys pressed in one window and sends them to another.
